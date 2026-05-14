@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Реєстрація</title>
+</head>
+<body>
+    <h1>Реєстрація на курс</h1>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Особисті дані</legend>
+
+            <div class="form-group">
+                <label for="fname">Ім'я:</label>
+                <input type="text" id="fname" name="first_name" required minlength="2">
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Прізвище:</label>
+                <input type="text" id="lname" name="last_name" required minlength="2">
+            </div>
+
+            <div class="form-group">
+                <label for="bdate">Дата народження:</label>
+                <input type="date" id="bdate" name="birth_date" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Контакти та пароль</legend>
+
+            <div class="form-group">
+                <label for="mail">Електронна пошта:</label>
+                <input type="email" id="mail" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pass">Пароль:</label>
+                <input type="password" id="pass" name="password" required minlength="8">
+            </div>
+
+            <div class="form-group">
+                <label for="pass2">Підтвердження пароля:</label>
+                <input type="password" id="pass2" name="password_confirm" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Навчання</legend>
+
+            <div class="form-group">
+                <label for="spec">Спеціальність:</label>
+                <select id="spec" name="specialty" required>
+                    <option value="">Оберіть варіант</option>
+                    <option value="ipz">ІПЗ</option>
+                    <option value="kn">КН</option>
+                    <option value="avis">АВІС</option>
+                </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="rules" name="rules_accepted" required>
+                <label for="rules">Я згоден з правилами</label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Зареєструватися</button>
+    </form>
+</body>
+</html>
+
+
+
+
