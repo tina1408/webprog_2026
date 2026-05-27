@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selectors playground — практична CSS 2</title>
+  
+  <style>
+    body {
+      font-family: Arial;
+      line-height: 1.6;
+      color:#333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h1, h2 {
+      color:#2b569a; 
+    }
+
+    h2 {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    .intro, blockquote {
+      border-left: 3px solid #2b569a;
+      padding-left: 15px;
+      color: #333;
+    }
+
+
+
+    p:not(.intro) {
+      color: #666;
+    }
+
+    form p {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    input {
+      display: block;
+      width: 100%; 
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+      font-family: inherit;
+    }
+
+    input[type="email"] {
+      border: 2px solid blue;
+    }
+
+    input:focus {
+      outline: none;
+      border: 3px solid blue;
+      box-shadow: 0 0 8px rgba(0, 0, 255, 0.4);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      color: #888;
+      background-color: #f4f4f4;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    ul li:first-child {
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse; 
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      margin: 20px 0;
+      padding: 0 15px;
+    }
+
+    blockquote::before {
+      content: "« ";
+    }
+
+    blockquote::after {
+      content: " »";
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Реєстрація на курс</h1>
+
+    <p class="intro">
+      Заповніть форму нижче, щоб зареєструватися на наш безкоштовний інтенсив
+      з веб-розробки. Поля з зірочкою — обов'язкові.
+    </p>
+
+    <p>
+      Курс триває 6 тижнів. Заняття — щовівторка і четверга. Після курсу
+      ви отримаєте сертифікат і доступ до закритого Telegram-чату випускників.
+    </p>
+
+    <h2>Особисті дані</h2>
+
+    <form>
+      <p>
+        <label>Ваше імʼя
+          <input type="text">
+        </label>
+      </p>
+      <p>
+        <label>Електронна пошта
+          <input type="email">
+        </label>
+      </p>
+      <p>
+        <label>Пароль (для особистого кабінету)
+          <input type="password">
+        </label>
+      </p>
+      <p>
+        <label>Вік
+          <input type="number">
+        </label>
+      </p>
+      <p>
+        <label>Бажана дата старту
+          <input type="date">
+        </label>
+      </p>
+      <p>
+        <label>Телефон (необовʼязково)
+          <input type="tel">
+        </label>
+      </p>
+      <p>
+        <button type="submit">Зареєструватися</button>
+      </p>
+    </form>
+
+    <h2>Що ви опануєте</h2>
+
+    <p>Основні блоки програми курсу:</p>
+
+    <ul>
+      <li>HTML і семантика веб-сторінки</li>
+      <li>CSS — оформлення, селектори, адаптивність</li>
+      <li>JavaScript — синтаксис, типи, функції</li>
+      <li>DOM — взаємодія з елементами сторінки</li>
+      <li>HTTP і робота з API</li>
+    </ul>
+
+    <p>А також додаткові інструменти:</p>
+
+    <ul>
+      <li>Git і GitHub</li>
+      <li>DevTools і дебагінг</li>
+      <li>Базові основи TypeScript</li>
+      <li>Веб-безпека: XSS, CSRF, MitM</li>
+      <li>Деплой простих застосунків</li>
+    </ul>
+
+    <h2>Розклад занять</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Тиждень</th>
+          <th>Тема</th>
+          <th>Тривалість</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>HTML і CSS</td>
+          <td>4 заняття</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>JavaScript: основи</td>
+          <td>4 заняття</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>DOM і події</td>
+          <td>4 заняття</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HTTP і AJAX</td>
+          <td>4 заняття</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>TypeScript і проєкт</td>
+          <td>4 заняття</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Безпека і залік</td>
+          <td>3 заняття + захист</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Відгуки випускників</h2>
+
+    <blockquote>
+      Я прийшла в курс без жодного коду в життя і вийшла з власним сайтом-портфоліо.
+      Найкращі шість тижнів моєї освіти.
+    </blockquote>
+
+    <blockquote>
+      Викладачі реально допомагають. Не залишають на самоті з помилками,
+      пояснюють «чому», а не лише «як».
+    </blockquote>
+
+    <p>Більше відгуків — на сторінці «Відгуки».</p>
+
+  </div>
+
+</body>
+</html>
